@@ -15,17 +15,17 @@ ActiveRecord::Schema.define(version: 2019_02_06_115956) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "stories_tables", force: :cascade do |t|
+  create_table "stories", force: :cascade do |t|
     t.string "description"
     t.string "picture"
   end
 
-  create_table "user_stories_tables", force: :cascade do |t|
+  create_table "user_stories", force: :cascade do |t|
     t.integer "user_id"
     t.integer "story_id"
   end
 
-  create_table "users_tables", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
   end
 
