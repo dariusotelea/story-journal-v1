@@ -5,8 +5,10 @@ ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
+
 # Use sqlite3 as the database for Active Record
 gem 'pg'
+gem 'fast_jsonapi'
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
