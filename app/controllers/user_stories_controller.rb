@@ -6,7 +6,7 @@ class UserStoriesController < ApplicationController
 
   def show
     user_story = User.find(params[:id])
-    render json: UserStorySerializer.new(user_storiy).serialized_json
+    render json: UserStorySerializer.new(user_story).serialized_json
   end
 
 end
