@@ -10,14 +10,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(:name)
+    user = User.new(user_params)
     user.save
     render json: UserSerializer.new(user).serialized_json
   end
 
   def update
     user = User.find(params[:id])
-    user.update(:name)
+    user.update(user_params)
     render json: UserSerializer.new(user).serialized_json
   end
 
@@ -25,5 +25,11 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.destroy
     render json: UserSerializer.new(user).serialized_json
+  end
+
+  private
+
+  def user_params
+    json_api_params(:name)
   end
 end
